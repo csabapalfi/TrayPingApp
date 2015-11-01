@@ -11,7 +11,7 @@
   },
   "main": "main.js",
   "scripts": {
-    "build": "electron-packager . TrayPing --platform=darwin --arch=x64 --version=0.34.1 --out .",
+    "build": "electron-packager . TrayPing --platform=darwin --arch=x64 --version=0.34.1 --overwrite",
     "start": "electron ."
   }
 }
