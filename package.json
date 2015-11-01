@@ -1,0 +1,17 @@
+{
+  "name": "tray-ping",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "net-ping": "^1.1.12"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.34.1"
+  },
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-packager . TrayPing --platform=darwin --arch=x64 --version=0.34.1 --out .",
+    "start": "electron ."
+  }
+}
