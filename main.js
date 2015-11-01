@@ -9,7 +9,7 @@ var path = require('path');
 var appIcon = null;
 app.on('ready', function(){
   if (app.dock) app.dock.hide();
-  appIcon = new Tray(path.join(app.getAppPath(), 'icon.png'));
+  appIcon = new Tray(path.join(app.getAppPath(), 'Icon.png'));
   appIcon.setToolTip('ping google.com');
   var contextMenu = Menu.buildFromTemplate([
     {
