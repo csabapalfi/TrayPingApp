@@ -1,7 +1,7 @@
 {
   "name": "tray-ping",
   "version": "1.0.0",
-  "description": "",
+  "description": "tray application showing google.com ping times",
   "dependencies": {
     "net-ping": "^1.1.12"
   },
