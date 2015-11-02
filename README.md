@@ -4,6 +4,11 @@ Simple OSX tray application displaying google.com ping times (refreshed every 2 
 
 ![screenshot](screenshot.png)
 
+## Installation
+
+* download [latest release](https://github.com/csabapalfi/tray-ping/releases/latest)
+* open .dmg and drag TrayPing.app to Applications.
+
 ## Why?
 
 * This app helps by displaying actual network status at a glance
