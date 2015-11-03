@@ -1,7 +1,6 @@
 var timers = require('timers');
 var path = require('path');
 var dns = require('dns');
-var EventEmitter = require('events');
 
 var app = require('app');
 var Menu = require('menu');
