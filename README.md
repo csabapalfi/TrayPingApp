@@ -22,3 +22,4 @@ Simple OSX tray application displaying google.com ping times (refreshed every 2 
 * open menu on right click not just left click
 * reduce app size
 * retina tray icon, app icons
+* add /Applications shortcut to dmg
