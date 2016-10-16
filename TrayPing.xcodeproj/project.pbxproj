@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77F5E99ADDBE0ECE08230CF4 /* Pods_TrayPing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDF375B5826AB9DA08DA4FB /* Pods_TrayPing.framework */; };
+		8275C6601DB2D1F20087830F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8275C65F1DB2D1F20087830F /* AppDelegate.swift */; };
+		8275C6621DB2D1F20087830F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8275C6611DB2D1F20087830F /* Assets.xcassets */; };
+		8275C6651DB2D1F20087830F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8275C6631DB2D1F20087830F /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45C27A2BCB85C8A4D17F0A98 /* Pods-TrayPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrayPing.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrayPing/Pods-TrayPing.release.xcconfig"; sourceTree = "<group>"; };
+		5DDF375B5826AB9DA08DA4FB /* Pods_TrayPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrayPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8275C65C1DB2D1F20087830F /* TrayPing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrayPing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8275C65F1DB2D1F20087830F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8275C6611DB2D1F20087830F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8275C6641DB2D1F20087830F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8275C6661DB2D1F20087830F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC492B4548245A4B4327132 /* Pods-TrayPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrayPing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrayPing/Pods-TrayPing.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8275C6591DB2D1F20087830F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F5E99ADDBE0ECE08230CF4 /* Pods_TrayPing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1483CA1A3EFDF06DA43CE6A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CC492B4548245A4B4327132 /* Pods-TrayPing.debug.xcconfig */,
+				45C27A2BCB85C8A4D17F0A98 /* Pods-TrayPing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8275C6531DB2D1F20087830F = {
+			isa = PBXGroup;
+			children = (
+				8275C65E1DB2D1F20087830F /* TrayPing */,
+				8275C65D1DB2D1F20087830F /* Products */,
+				1483CA1A3EFDF06DA43CE6A4 /* Pods */,
+				9E145661B34BD7AD60D97541 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8275C65D1DB2D1F20087830F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8275C65C1DB2D1F20087830F /* TrayPing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8275C65E1DB2D1F20087830F /* TrayPing */ = {
+			isa = PBXGroup;
+			children = (
+				8275C65F1DB2D1F20087830F /* AppDelegate.swift */,
+				8275C6611DB2D1F20087830F /* Assets.xcassets */,
+				8275C6631DB2D1F20087830F /* MainMenu.xib */,
+				8275C6661DB2D1F20087830F /* Info.plist */,
+			);
+			path = TrayPing;
+			sourceTree = "<group>";
+		};
+		9E145661B34BD7AD60D97541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DDF375B5826AB9DA08DA4FB /* Pods_TrayPing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8275C65B1DB2D1F20087830F /* TrayPing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8275C6691DB2D1F20087830F /* Build configuration list for PBXNativeTarget "TrayPing" */;
+			buildPhases = (
+				1A99BF25E77A9BCC1599C6F1 /* [CP] Check Pods Manifest.lock */,
+				8275C6581DB2D1F20087830F /* Sources */,
+				8275C6591DB2D1F20087830F /* Frameworks */,
+				8275C65A1DB2D1F20087830F /* Resources */,
+				1C35ADC4362ACA1BF896811F /* [CP] Embed Pods Frameworks */,
+				E30A82C3671C0C18D313E139 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrayPing;
+			productName = TrayPing;
+			productReference = 8275C65C1DB2D1F20087830F /* TrayPing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8275C6541DB2D1F20087830F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Palfi Ltd";
+				TargetAttributes = {
+					8275C65B1DB2D1F20087830F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8275C6571DB2D1F20087830F /* Build configuration list for PBXProject "TrayPing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8275C6531DB2D1F20087830F;
+			productRefGroup = 8275C65D1DB2D1F20087830F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8275C65B1DB2D1F20087830F /* TrayPing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8275C65A1DB2D1F20087830F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8275C6621DB2D1F20087830F /* Assets.xcassets in Resources */,
+				8275C6651DB2D1F20087830F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A99BF25E77A9BCC1599C6F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1C35ADC4362ACA1BF896811F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrayPing/Pods-TrayPing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30A82C3671C0C18D313E139 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrayPing/Pods-TrayPing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8275C6581DB2D1F20087830F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8275C6601DB2D1F20087830F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8275C6631DB2D1F20087830F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8275C6641DB2D1F20087830F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8275C6671DB2D1F20087830F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8275C6681DB2D1F20087830F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		8275C66A1DB2D1F20087830F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CC492B4548245A4B4327132 /* Pods-TrayPing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TrayPing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.palfi.TrayPing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8275C66B1DB2D1F20087830F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C27A2BCB85C8A4D17F0A98 /* Pods-TrayPing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TrayPing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.palfi.TrayPing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8275C6571DB2D1F20087830F /* Build configuration list for PBXProject "TrayPing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8275C6671DB2D1F20087830F /* Debug */,
+				8275C6681DB2D1F20087830F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8275C6691DB2D1F20087830F /* Build configuration list for PBXNativeTarget "TrayPing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8275C66A1DB2D1F20087830F /* Debug */,
+				8275C66B1DB2D1F20087830F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8275C6541DB2D1F20087830F /* Project object */;
+}
