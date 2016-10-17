@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  TrayPing
-//
-//  Created by Csaba Palfi on 15/10/2016.
-//  Copyright © 2016 Palfi Ltd. All rights reserved.
-//
-
 import Cocoa
 import PlainPing
 
@@ -14,10 +6,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let statusItem = NSStatusBar.system().statusItem(withLength:NSVariableStatusItemLength)
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
     }
+    
+    let statusItem = NSStatusBar.system().statusItem(withLength:NSVariableStatusItemLength)
     
     func ping() {
         PlainPing.ping("www.google.com", withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
@@ -42,11 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = statusMenu
         self.ping();
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
 
 }
 
