@@ -7,7 +7,7 @@ Simple OSX tray application displaying google.com ping times (refreshed every 2 
 ## Installation
 
 * download [latest release](https://github.com/csabapalfi/tray-ping/releases/latest)
-* open .dmg and drag TrayPing.app to Applications.
+* unzip and drag TrayPing.app to Applications.
 
 ## Why?
 
@@ -18,8 +18,5 @@ Simple OSX tray application displaying google.com ping times (refreshed every 2 
 
 ## What's missing?
 
-* any sort of configurability (host, ping interval)
-* open menu on right click not just left click
-* reduce app size
-* retina tray icon, app icons
-* add /Applications shortcut to dmg
+* any sort of configurability (host, ping interval, timeout)
+* use .dmg and add /Applications shortcut for easier install
