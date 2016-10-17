@@ -1,4 +1,4 @@
-# tray-ping
+# TrayPing.app
 
 Simple OSX tray application displaying google.com ping times (refreshed every 2 secs)
 
