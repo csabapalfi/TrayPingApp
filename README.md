@@ -20,3 +20,12 @@ Simple OSX tray application displaying google.com ping times (refreshed every 2 
 
 * any sort of configurability (host, ping interval, timeout)
 * use .dmg and add /Applications shortcut for easier install
+
+## Development
+
+Requires [CocoaPods](https://cocoapods.org/)
+
+```
+pod install
+open TrayPing.xcworkspace
+```
