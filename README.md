@@ -1,6 +1,9 @@
 # tray-ping
 
-Simple OSX tray application displaying google.com ping times (refreshed every 2 secs)
+Simple OSX tray application displaying
+* `google.com` DNS resolution time
+* `8.8.8.8` (Google DNS) ping time
+*  refreshed every 2 secs
 
 ![screenshot](screenshot.png)
 
@@ -19,7 +22,4 @@ Simple OSX tray application displaying google.com ping times (refreshed every 2 
 ## What's missing?
 
 * any sort of configurability (host, ping interval)
-* open menu on right click not just left click
-* reduce app size
-* retina tray icon, app icons
 * add /Applications shortcut to dmg

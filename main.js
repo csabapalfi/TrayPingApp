@@ -1,59 +1,55 @@
-var timers = require('timers');
-var path = require('path');
-var dns = require('dns');
+const timers = require('timers');
+const path = require('path');
+const dns = require('dns');
+const Ping = require('ping-lite');
+const { forever, timeout, parallel, waterfall } = require('async');
+const { app, dialog, BrowserWindow, Tray, Menu } = require('electron');
 
-var app = require('app');
-var Menu = require('menu');
-var Tray = require('tray');
-var dialog = require('dialog');
+const dnsLatency = (host, callback) => {
+  const dnsStartMs = +(new Date);
+  dns.resolve(host, err => {
+    if (err) return callback(err);
+    callback(null, +(new Date) - dnsStartMs);
+  });
+}
 
-var ping = require('net-ping');
+const pingLatency = (ip, callback) => {
+  const ping = new Ping(ip);
+  ping.send((err, latencyMs) => {
+    if (err) return callback(err);
+    callback(null, Math.round(latencyMs));
+  });
+}
 
-app.on('ready', function(){
+let mainWindow;
+app.on('ready', () => {
+  mainWindow = new BrowserWindow({show: false});
   if (app.dock) app.dock.hide();
 
-  var trayIcon = new Tray(path.join(app.getAppPath(), 'icon.png'));
+  const tray = new Tray(path.join(app.getAppPath(), 'icon.png'));
 
-  trayIcon.setContextMenu(Menu.buildFromTemplate([{
+  tray.setContextMenu(Menu.buildFromTemplate([{
     label: 'Quit',
-    click: function() { app.quit(); }
+    click: () => app.quit(),
   }]));
 
-  var session = ping.createSession();
+  tray.on('click', tray.popUpContextMenu);
+  tray.on('right-click', tray.popUpContextMenu);
 
-  var timeout = timers.setTimeout(dnsError, 2000);
-  dns.lookup('google.com', function onLookup(err, address) {
-    timers.clearTimeout(timeout);
-    if (err) return dnsError();
-    pingHost(address);
-  });
+  let title = `.../...ms`;
+  tray.setTitle(title);
 
-  function pingHost(address) {
-    session.pingHost(address, function (error, target, sent, rcvd) {
-      if (error) {
-        if(isTimeout(error)) return setTitle('timeout');
-        return setTitle('error');
-      }
-      setTitle(rcvd - sent + 'ms');
+  const refreshLatency = (check, arg, timeoutMs, titleRegex) =>
+    () => setInterval(() => {
+      timeout(check, timeoutMs)(arg, (err, latency) => {
+        title = title.replace(titleRegex, latency || '...');
+        tray.setTitle(title);
+      })
+    }, timeoutMs + 100);
 
-    });
-    timers.setTimeout(pingHost, 2000, address);
-  }
-
-  function dnsError() {
-    dialog.showErrorBox(
-      'DNS lookup error',
-      'Failed to resolve google.com'
-    );
-    app.quit();
-  }
-
-  function isTimeout(error) {
-    return error instanceof ping.RequestTimedOutError;
-  }
-
-  function setTitle(title) {
-    trayIcon.setTitle(title);
-  }
+  parallel([
+    refreshLatency(dnsLatency, 'google.com', 2000, /[\d\.]+(?=\/)/),
+    refreshLatency(pingLatency, '8.8.8.8', 2000, /[\d\.]+(?=ms)/),
+  ]);
 
 });
