@@ -1,8 +1,8 @@
 # TrayPing.app
 
 Simple OSX tray application displaying
-* `google.com` DNS resolution time
-* `8.8.8.8` (Google DNS) ping time
+* `google.com` DNS resolution latency
+* `8.8.8.8` (Google DNS) ping latency
 *  refreshed every 2 secs
 
 ![screenshot](screenshot.png)
