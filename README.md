@@ -5,7 +5,7 @@ Simple OSX tray application displaying
 * `8.8.8.8` (Google DNS) ping time
 *  refreshed every 2 secs
 
-<!-- ![screenshot](screenshot.png) -->
+![screenshot](screenshot.png)
 
 ## Installation
 
@@ -21,5 +21,4 @@ Simple OSX tray application displaying
 
 ## What's missing?
 
-* any sort of configurability (host, ping interval)
-* add /Applications shortcut to dmg
+* any sort of configurability (check interval, pinged host, dns hostname)
