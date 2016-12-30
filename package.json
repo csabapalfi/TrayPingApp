@@ -1,6 +1,6 @@
 {
   "name": "TrayPing",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "tray application showing google.com ping times",
   "dependencies": {
     "async": "^2.1.4",
