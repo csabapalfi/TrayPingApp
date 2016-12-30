@@ -5,7 +5,7 @@ Simple OSX tray application displaying
 * `8.8.8.8` (Google DNS) ping time
 *  refreshed every 2 secs
 
-![screenshot](screenshot.png)
+<!-- ![screenshot](screenshot.png) -->
 
 ## Installation
 
