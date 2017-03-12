@@ -1,10 +1,11 @@
 {
   "name": "TrayPing",
   "version": "3.0.0",
-  "description": "tray application showing google.com ping times",
+  "description": "tray application showing DNS/ping latency",
   "dependencies": {
-    "async": "^2.1.4",
-    "ping-lite": "^1.0.2"
+    "dns-socket": "^1.6.1",
+    "ping-lite": "^1.0.2",
+    "resolv": "^1.0.0"
   },
   "devDependencies": {
     "electron": "^1.4.13",
