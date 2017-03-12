@@ -3,14 +3,13 @@ const EventEmitter = require('events');
 const Ping = require('ping-lite');
 const dns = require('dns-socket');
 const resolv = require('resolv');
-const socket = dns({ timeout: 2000 });
 
-const dnsLatency = (hostname) =>
+const dnsLatency = (hostname, dnsSocket) =>
   new Promise((resolve, reject) => {
     const nameserver = resolv().nameserver[0];
     const query = { questions: [{ type: 'A', name: hostname }] };
     const dnsStartMs = +(new Date());
-    socket.query(query, 53, nameserver, error =>
+    dnsSocket.query(query, 53, nameserver, error =>
       error ? reject(error) : resolve(+(new Date()) - dnsStartMs));
   }
 );
@@ -35,14 +34,15 @@ const timeout = (promise, timeoutMs) => {
   .catch(error => { clearTimeout(); throw error; });
 };
 
-const checkLatencies = ({ hostname, address, timeoutMs }) =>
+const checkLatencies = ({ hostname, address, timeoutMs, dnsSocket }) =>
   Promise.all([
-    dnsLatency(hostname, timeoutMs).catch(() => null),
+    dnsLatency(hostname, dnsSocket).catch(() => null),
     timeout(pingLatency(address), timeoutMs).catch(() => null)
   ]);
 
 const networkStatus = (options) => {
   const latencies = new EventEmitter();
+  options.dnsSocket = dns({ timeout: options.timeoutMs });
   const emitLatencies = () => checkLatencies(options)
     .then(([dns, ping]) =>
       latencies.emit('latencies', { dns, ping })
