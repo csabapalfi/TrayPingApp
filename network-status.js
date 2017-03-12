@@ -47,11 +47,12 @@ const checkLatencies = ({ hostname, address, timeoutMs }) =>
 
 const networkStatus = (options) => {
   const latencies = new EventEmitter();
-  setInterval(() => checkLatencies(options)
+  const emitLatencies = () => checkLatencies(options)
     .then(([dns, ping]) =>
       latencies.emit('latencies', { dns, ping })
-    )
-  , options.intervalMs);
+    );
+  emitLatencies();
+  setInterval(emitLatencies, options.intervalMs);
   return latencies;
 };
 
