@@ -35,12 +35,8 @@ const timeout = (promise, timeoutMs) => {
   .catch(error => { clearTimeout(); throw error; });
 };
 
-const allIgnoreErrors = (promises) => Promise.all(
-  promises.map(promise => promise.catch(() => null))
-);
-
 const checkLatencies = ({ hostname, address, timeoutMs }) =>
-  allIgnoreErrors([
+  Promise.all([
     dnsLatency(hostname, timeoutMs).catch(() => null),
     timeout(pingLatency(address), timeoutMs).catch(() => null)
   ]);
