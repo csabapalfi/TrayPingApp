@@ -3,10 +3,10 @@ const EventEmitter = require('events');
 const Ping = require('ping-lite');
 const dns = require('dns-socket');
 const resolv = require('resolv');
+const socket = dns({ timeout: 2000 });
 
-const dnsLatency = (hostname, timeout) =>
+const dnsLatency = (hostname) =>
   new Promise((resolve, reject) => {
-    var socket = dns({ timeout });
     const nameserver = resolv().nameserver[0];
     const query = { questions: [{ type: 'A', name: hostname }] };
     const dnsStartMs = +(new Date());
