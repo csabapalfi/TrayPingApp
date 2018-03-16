@@ -8,7 +8,7 @@
     "resolv": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "^1.4.13",
+    "electron": "^1.8.4",
     "electron-installer-dmg": "^0.2.0",
     "electron-packager": "^8.4.0"
   },
