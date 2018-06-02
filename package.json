@@ -3,7 +3,7 @@
   "version": "3.3.0",
   "description": "tray application showing DNS/ping latency",
   "dependencies": {
-    "dns-socket": "^1.6.1",
+    "dns-socket": "^4.0.0",
     "ping-lite": "^1.0.2",
     "resolv": "^1.0.0"
   },
